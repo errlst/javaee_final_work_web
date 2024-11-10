@@ -44,6 +44,7 @@
   <script setup>
   import { useRoute, useRouter } from 'vue-router'
   import { ref } from 'vue'
+  import { Document, Goods, ArrowDown } from '@element-plus/icons-vue'
   
   const route = useRoute()
   const router = useRouter()

@@ -46,13 +46,12 @@ const handleSubmit = async () => {
     if (isLogin.value) {
       await login(form.value)
       ElMessage.success('登录成功')
+      router.push('/goods')
     } else {
       await register(form.value)
       ElMessage.success('注册成功')
       isLogin.value = true
-      return
     }
-    router.push('/goods')
   } catch (error) {
     ElMessage.error(error.response?.data?.message || '操作失败')
   }
@@ -70,5 +69,20 @@ const handleSubmit = async () => {
 
 .login-card {
   width: 400px;
+}
+
+.card-header {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.el-form-item:last-child {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.el-button {
+  margin: 0 10px;
 }
 </style>

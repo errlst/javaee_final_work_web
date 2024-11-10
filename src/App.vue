@@ -1,8 +1,18 @@
 <template>
-  <!-- 删除默认的导航和欢迎内容，只保留路由出口 -->
-  <RouterView />
+  <el-config-provider>
+    <RouterView />
+  </el-config-provider>
 </template>
 
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 </script>
+
+<style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+</style>
